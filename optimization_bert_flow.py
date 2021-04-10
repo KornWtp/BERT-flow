@@ -104,7 +104,7 @@ def create_optimizer(loss, flow_loss, init_lr, init_flow_lr,
   else:
     raise NotImplementedError
   
-class AdamWeightDecayOptimizer(tf.train.Optimizer):
+class AdamWeightDecayOptimizer(tf.compat.v1.train.Optimizer):
   """A basic Adam optimizer that includes "correct" L2 weight decay."""
 
   def __init__(self,
