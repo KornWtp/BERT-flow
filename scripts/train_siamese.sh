@@ -1,5 +1,5 @@
 #!/bin/bash
-CURDIR=$(cd $(dirname $0); cd..; pwd)
+CURDIR=$(cd $(dirname $0); cd ..; pwd)
 
 export BERT_DIR=uncased_L-12_H-768_A-12
 
