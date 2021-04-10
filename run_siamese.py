@@ -427,7 +427,7 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
 
 
 def main(_):
-  tf.logging.set_verbosity(tf.logging.INFO)
+  tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.INFO)
 
   # random seed
   random.seed(FLAGS.seed)
@@ -917,4 +917,4 @@ if __name__ == "__main__":
   flags.mark_flag_as_required("task_name")
   flags.mark_flag_as_required("vocab_file")
   flags.mark_flag_as_required("bert_config_file")
-  tf.app.run()
+  tf.compat.v1.app.run()
