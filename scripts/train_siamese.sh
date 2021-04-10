@@ -1,14 +1,14 @@
 #!/bin/bash
-CURDIR=$(cd $(dirname $0); cd ..; pwd)
+CURDIR=$(cd $(dirname $0); cd..; pwd)
 
-export BERT_DIR=${BERT_PREMODELS}/uncased_L-12_H-768_A-12
+export BERT_DIR=uncased_L-12_H-768_A-12
 
 if [[ $BERT_NAME == "large-wwm" ]];then
-  export BERT_DIR=${BERT_PREMODELS}/wwm_uncased_L-24_H-1024_A-16
+  export BERT_DIR=wwm_uncased_L-24_H-1024_A-16
 elif [[ $BERT_NAME == "large" ]];then
-  export BERT_DIR=${BERT_PREMODELS}/uncased_L-24_H-1024_A-16
+  export BERT_DIR=uncased_L-24_H-1024_A-16
 else
-  export BERT_DIR=${BERT_PREMODELS}/uncased_L-12_H-768_A-12
+  export BERT_DIR=uncased_L-12_H-768_A-12
 fi
 
 if [ -z "$INIT_CKPT" ]; then
