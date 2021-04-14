@@ -470,7 +470,7 @@ def main(_):
 
     # load senteval
     import sys
-    PATH_TO_SENTEVAL, PATH_TO_DATA = '../SentEval', '../SentEval/data'
+    PATH_TO_SENTEVAL, PATH_TO_DATA = 'SentEval', 'SentEval/data'
     sys.path.insert(0, PATH_TO_SENTEVAL)
     import senteval
 
